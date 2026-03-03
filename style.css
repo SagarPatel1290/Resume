@@ -1,0 +1,327 @@
+/* ============================================================================
+   RESUME: Sagar Patel (Original CSS - Professional Formatting Only)
+   No style changes applied.
+============================================================================ */
+
+:root {
+    --primary: #1e3a8a;
+    --accent: #2563eb;
+    --text: #374151;
+    --bg-light: #f8fafc;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background: #e5e7eb; 
+    color: var(--text); 
+}
+
+.resume-page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    background: white;
+    padding: 10mm 10mm;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 12px;
+    border-bottom: 5px solid var(--primary);
+    margin-bottom: 10px;
+}
+
+.profile-section { 
+    display: flex; 
+    gap: 25px; 
+    align-items: center; 
+}
+
+.profile-img { 
+    width: 147px; 
+    height: 189px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-info h1 { 
+    font-size: 2rem; 
+    color: var(--primary); 
+    letter-spacing: 1px; 
+}
+
+.tagline { 
+    color: var(--accent); 
+    font-weight: bold; 
+    font-size: .80rem; 
+    margin-bottom: 10px; 
+}
+
+.contact-grid { 
+    display: grid; 
+    grid-template-columns: .9fr 1.2fr; 
+    gap: 10px 0px; 
+    font-size: 0.85rem; 
+}
+
+.address-wrapper {
+    grid-column: span 2;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.address-text { 
+    display: block; 
+    line-height: 1.4;
+}
+
+.contact-grid i { 
+    width: 16px; 
+    text-align: center; 
+    color: #2563eb; 
+}
+
+.qr-section { 
+    text-align: center; 
+    color: var(--primary); 
+}
+
+.qr-img { 
+    width: 120px; 
+    height: 120px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background: white; 
+}
+
+.qr-text { 
+    font-size: 0.55rem; 
+    font-weight: bold; 
+    margin-top: 3px; 
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    background: #eff6ff;
+    padding: 10px 15px;
+    margin: 5px 0 5px;
+    border-left: 6px solid var(--primary);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-box {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: -1px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.skill-category {
+    background: var(--bg-light);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: -1px;
+    border: 1px solid #cbd5e1;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.project-card {
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.project-header { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 6px; 
+}
+
+.p-title { 
+    font-weight: bold; 
+    color: var(--primary); 
+    font-size: 0.95rem; 
+}
+
+.p-badge { 
+    font-size: 0.65rem; 
+    background: #dcfce7; 
+    color: #166534; 
+    padding: 2px 8px; 
+    border-radius: 4px; 
+    font-weight: bold; 
+}
+
+.p-badge.academic { 
+    background: #fee2e2; 
+    color: #991b1b; 
+}
+
+.p-badge.android { 
+    background: #fef9c3; 
+    color: #854d0e; 
+}
+
+.p-badge.utility { 
+    background: #e0f2fe; 
+    color: #075985; 
+}
+
+.p-stack { 
+    color: var(--accent); 
+    font-weight: bold; 
+    font-size: 0.8rem; 
+    margin-bottom: 6px; 
+}
+
+.p-desc { 
+    font-size: 0.85rem; 
+    color: #4b5563; 
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: -1px;
+    padding-left: 18px; 
+    margin-top: 5px;
+}
+
+.experience-box ul { 
+    margin-left: 20px; 
+    margin-top: 10px; 
+}
+
+.exp-header { 
+    display: flex; 
+    justify-content: space-between; 
+    color: var(--primary); 
+    font-weight: bold; 
+}
+
+.exp-sub { 
+    color: var(--accent); 
+    font-weight: bold; 
+    margin-bottom: 8px; 
+}
+
+.edu-item { 
+    padding: 10px 0; 
+    border-bottom: 1px solid #f1f5f9; 
+    font-size: 0.9rem;
+}
+
+.edu-item:last-child { 
+    border-bottom: none; 
+}
+
+.edu-item span { 
+    color: #64748b; 
+}
+
+/* Side-by-side row setup */
+.bottom-sections-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 0px;
+    align-items: stretch;
+}
+
+/* Fixed height boxes */
+.fixed-height-box {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.fixed-height-box p {
+    margin-bottom: 6px;
+    font-size: 0.88rem;
+}
+
+/* Signature Styling */
+.decl-relative {
+    position: relative;
+}
+
+.signature-inline {
+    margin-top: auto;
+    align-self: flex-end;
+    text-align: center;
+    width: 130px;
+}
+
+.sign-img-small {
+    width: 80px;
+    margin-bottom: -8px;
+    position: relative;
+    z-index: 2;
+}
+
+.sign-line-small {
+    height: 1.5px;
+    background: #333;
+    width: 100%;
+}
+
+.sign-name-small {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+/* Page footer fix */
+.footer-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 20px;
+}
+
+@media print {
+    body { 
+        background: none; 
+    }
+    .resume-page { 
+        margin: 0; 
+        box-shadow: none; 
+        page-break-after: always; 
+    }
+}
