@@ -1,6 +1,5 @@
 /* ============================================================================
-   RESUME: Sagar Patel (Original CSS - Professional Formatting Only)
-   No style changes applied.
+   RESUME: Sagar Patel (Original CSS - Professional Formatting)
 ============================================================================ */
 
 :root {
@@ -181,30 +180,6 @@ h2 {
     font-size: 0.95rem; 
 }
 
-.p-badge { 
-    font-size: 0.65rem; 
-    background: #dcfce7; 
-    color: #166534; 
-    padding: 2px 8px; 
-    border-radius: 4px; 
-    font-weight: bold; 
-}
-
-.p-badge.academic { 
-    background: #fee2e2; 
-    color: #991b1b; 
-}
-
-.p-badge.android { 
-    background: #fef9c3; 
-    color: #854d0e; 
-}
-
-.p-badge.utility { 
-    background: #e0f2fe; 
-    color: #075985; 
-}
-
 .p-stack { 
     color: var(--accent); 
     font-weight: bold; 
@@ -307,7 +282,6 @@ h2 {
     margin-top: 2px;
 }
 
-/* Page footer fix */
 .footer-note {
     text-align: center;
     font-size: 0.8rem;
@@ -315,6 +289,72 @@ h2 {
     margin-top: 20px;
 }
 
+/* ============================================================================
+   NEW ADDITIONS: ICONS, BADGES & WATERMARKS
+============================================================================ */
+
+/* Icon Spacing Fixes */
+i.fas, i.fab { margin-right: 4px; }
+.p-title i, .p-stack i { color: var(--accent); }
+
+/* Dynamic Colored Badges */
+.p-badge {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.p-badge.live-app { background: #dcfce7; color: #166534; }
+.p-badge.live-client { background: #fee2e2; color: #991b1b; }
+.p-badge.full-stack { background: #f3e8ff; color: #6b21a8; }
+.p-badge.database { background: #e0f2fe; color: #075985; }
+.p-badge.android { background: #fef9c3; color: #854d0e; }
+.p-badge.api-tool { background: #ffedd5; color: #9a3412; }
+
+/* Watermark Setup */
+.has-watermark {
+    position: relative;
+    overflow: hidden; /* Watermark card ke bahar na nikle */
+    z-index: 1;
+}
+
+/* Ensure text is above watermark */
+.has-watermark > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Project Card Watermarks */
+.card-watermark {
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    font-size: 5rem !important;
+    color: var(--primary) !important;
+    opacity: 0.04; /* Ekdum subtle faint look */
+    z-index: 0 !important;
+    transform: rotate(-15deg);
+    pointer-events: none;
+    margin: 0 !important;
+}
+
+/* Big Section Watermarks */
+.section-watermark {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 8rem !important;
+    color: var(--primary) !important;
+    opacity: 0.03;
+    z-index: 0 !important;
+    transform: rotate(-10deg);
+    pointer-events: none;
+    margin: 0 !important;
+}
+
+/* ============================================================================
+   PRINT OPTIMIZATION
+============================================================================ */
 @media print {
     body { 
         background: none; 
@@ -323,5 +363,10 @@ h2 {
         margin: 0; 
         box-shadow: none; 
         page-break-after: always; 
+    }
+    /* Force printers to print watermark graphics */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }
